@@ -143,14 +143,14 @@ public class RampCalculatorServiceTest {
 
     @Test
     void NSTDEC1(){
-        // test valid extra weight
+        // test valid extra length
         double result = _rampCalculatorService.calculateRampRate(312.5, 123, 26.5, false);
         assertEquals(25.97, result);
     }
 
     @Test
     void NSTDEC2(){
-        // test valid extra weight
+        // test valid extra width
         double result = _rampCalculatorService.calculateRampRate(192.5, 213, 26.5, false);
         assertEquals(25.97, result);
     }
@@ -164,14 +164,14 @@ public class RampCalculatorServiceTest {
 
     @Test
     void UNITEC1(){
-        // test valid extra weight
+        // test valid unit convert 1 inch
         double result = _rampCalculatorService.converter(1);
         assertEquals(25.4, result);
     }
 
     @Test
     void UNITEC2(){
-        // test valid extra weight
+        // test valid unit convert 0 inch
         double result = _rampCalculatorService.converter(0);
         assertEquals(0, result);
     }
