@@ -12,4 +12,14 @@ After that the application can be accessed using the base url *http://localhost:
 ## Api Documentation
 After starting the application the API Documentation with Swagger can be seen here: http://localhost:8080/calculator/swagger-ui.html
 
+## How to run assignment B
+### File location for ramp calculator
 
+Implementation: 
+1. rest-calculator/src/main/java/com/example/calculator/ramp/RampCalculatorService.java
+2. rest-calculator/src/main/java/com/example/calculator/ramp/RampController.java
+
+Test:
+1. rest-calculator/src/test/java/com/example/calculator/RampCalculatorServiceTest.java
+
+API can be tested by url: http://localhost:8080/calculator/ramp//calculateRate/{length}/{width}/{weight}/{isInch}
