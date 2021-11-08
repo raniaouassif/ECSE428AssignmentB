@@ -18,7 +18,7 @@ Compile:
 ./mvnw spring-boot:run
 ```
 
-Run and test API by url: http://localhost:8080/calculator/ramp//calculateRate/{length}/{width}/{weight}/{isInch}
+Run and test API by url: http://localhost:8080/calculator/ramp//calculateRate/{length}/{width}/{weight}/{isInch}/{isOunce}
 
 ### Relevant files
 
