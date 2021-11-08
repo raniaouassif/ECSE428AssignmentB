@@ -9,11 +9,16 @@ Rania Ouassif, 260861621
 
 Lide Cui, 260852913
 
+### Instruction on how to install the application : 
+
+
+
+
 ### Description : 
 
 Implement **ramp** a **rest API postal rate calculator** application with TDD implemented as a local host application.
 
-ramp-is implemented as a rest apiservice on a local host environment, you may choose flask, or any development environment of choice
+ramp is implemented as a rest apiservice on a local host environment, by the Spring Boot framework
 
 ramp–rate rules follow : 
 
