@@ -11,8 +11,24 @@ Lide Cui, 260852913
 
 ### Instruction on how to install the application : 
 
+Requirements: Java JDK 11 & Maven 
 
+Compile:
+```
+./mvnw spring-boot:run
+```
 
+Run and test API by url: http://localhost:8080/calculator/ramp//calculateRate/{length}/{width}/{weight}/{isInch}
+
+### Relevant files
+
+Implementation:
+
+1. rest-calculator/src/main/java/com/example/calculator/ramp/RampCalculatorService.java
+2. rest-calculator/src/main/java/com/example/calculator/ramp/RampController.java
+
+Test:
+1. rest-calculator/src/test/java/com/example/calculator/RampCalculatorServiceTest.java
 
 ### Description : 
 
