@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 public class RampCalculatorService {
     
     public double calculateRampRate(double length, double width, double weight, boolean isInch, boolean isOunce){
+
         if(isInch){
             length = this.converterInch(length);
             width = this.converterInch(width);
@@ -15,13 +16,12 @@ public class RampCalculatorService {
           weight = this.converterOunce(weight);
         }
 
+        double rate = 0;
+
         if(length < 140 || length > 380 || width < 90 || width > 270 || weight < 3 || weight > 500) {
             return -1;
         }
-
-        double rate = 0;
-
-        if(length > 245 || width > 156 || weight > 50){
+            if(length > 245 || width > 156 || weight > 50){
             rate = weight > 100 ? 98 + 2.4 *(weight -100): 0.98 * weight;
         }else{
             rate = weight > 30 ? 14.7 + 0.8 *(weight - 30): 0.49 * weight;
@@ -37,4 +37,6 @@ public class RampCalculatorService {
     public double converterOunce(double ounce) { //Converting Ounce to grams
       return ounce * 28.3;
     }
+
+
 }

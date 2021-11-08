@@ -19,7 +19,7 @@ public class RampController {
         _rampCalculator = rampCalculator;
     }
 
-    @GetMapping("/calculateRate/{length}/{width}/{weight}/{isInch}")
+    @GetMapping("/calculateRate/{length}/{width}/{weight}/{isInch}/{isOunce}")
     public ApiResult rampRate(@PathVariable double length,@PathVariable double width,
     @PathVariable double weight,@PathVariable boolean isInch, @PathVariable boolean isOunce){
         try {
