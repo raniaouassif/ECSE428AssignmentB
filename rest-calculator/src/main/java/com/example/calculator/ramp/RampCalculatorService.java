@@ -5,10 +5,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class RampCalculatorService {
     
-    public double calculateRampRate(double length, double width, double weight, boolean isInch){
+    public double calculateRampRate(double length, double width, double weight, boolean isInch, boolean isOunce){
         if(isInch){
-            length = this.converter(length);
-            width = this.converter(width);
+            length = this.converterInch(length);
+            width = this.converterInch(width);
+        }
+        
+        if(isOunce) {
+          weight = this.converterOunce(weight);
         }
 
         if(length < 140 || length > 380 || width < 90 || width > 270 || weight < 3 || weight > 500) {
@@ -26,7 +30,11 @@ public class RampCalculatorService {
         return rate;
     }
 
-    public double converter(double inch){
+    public double converterInch(double inch){ // Converting inches to mm 
         return inch * 25.4;
+    }
+    
+    public double converterOunce(double ounce) { //Converting Ounce to grams
+      return ounce * 28.3;
     }
 }

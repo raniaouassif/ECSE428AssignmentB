@@ -21,9 +21,9 @@ public class RampController {
 
     @GetMapping("/calculateRate/{length}/{width}/{weight}/{isInch}")
     public ApiResult rampRate(@PathVariable double length,@PathVariable double width,
-    @PathVariable double weight,@PathVariable boolean isInch){
+    @PathVariable double weight,@PathVariable boolean isInch, @PathVariable boolean isOunce){
         try {
-            double rate = _rampCalculator.calculateRampRate(length, width, weight, isInch);
+            double rate = _rampCalculator.calculateRampRate(length, width, weight, isInch, isOunce);
             return getResult(rate);
         }catch(Exception e){
             return getResultFromError(e.getMessage());
